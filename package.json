@@ -1,9 +1,9 @@
 {
-  "name": "env-install",
-  "version": "1.0.0",
+  "name": "envfile-install",
+  "version": "0.1.0",
   "description": "Install envDependencies from package.json using either a .env file or environment variable replacements",
   "bin": {
-    "env-install": "index.js"
+    "envfile-install": "index.js"
   },
   "main": "index.js",
   "scripts": {
@@ -11,23 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/epavan/env-install.git"
+    "url": "git+https://github.com/epavan/envfile-install.git"
   },
   "keywords": [
     "npm",
     "install",
     ".env",
     "environment",
-    "variables",
-    "private",
-    "repository",
-    "github",
-    "hosting"
+    "variables"
   ],
   "author": "Emanuele Pavan <emanuele.pav@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/epavan/env-install/issues"
+    "url": "https://github.com/epavan/envfile-install/issues"
   },
-  "homepage": "https://github.com/epavan/env-install#readme"
+  "homepage": "https://github.com/epavan/envfile-install#readme"
 }
