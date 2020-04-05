@@ -1,6 +1,6 @@
 # env-install
 
-Using private git repositories that requires authentication is often necessary when running npm install, but you don't want to put keys, tokens or passwords in your code, so instead you can use this module that allows you to define packages with environment variable names to inject your keys, passwords or tokens.
+Using private git repositories that requires authentication is often necessary when running npm install, but you don't want to put keys, tokens or passwords in your code, so instead you can use this module that allows you to define packages with environment variable names to inject your keys, passwords or tokens from either .env vars or process vars.
 
 ## Usage
 
@@ -20,7 +20,18 @@ envDependencies: {
 ```
 
 In the above example `some-secret-module` will be installed like this:
+
 ```
 GITHUB_TOKEN=abcdefg123456
 npm install https://abcdefg123456:x-oauth-basic@github.com/you/privaterepo
+```
+
+The variable can be defined either in an .env file or read from process.env.
+Priority is given to .env file if the var exists in both places.
+
+Example of a .env file:
+
+```
+.env file
+GITHUB_TOKEN=abcdefg123456
 ```
